@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production $(npm bin)/webpack"
+    "build": "NODE_ENV=production $(npm bin)/webpack -p"
   },
   "author": "",
   "license": "ISC",

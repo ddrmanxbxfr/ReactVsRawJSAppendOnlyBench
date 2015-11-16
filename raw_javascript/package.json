@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "$(npm bin)/webpack"
+    "build": "$(npm bin)/webpack -p"
   },
   "author": "",
   "license": "ISC",
