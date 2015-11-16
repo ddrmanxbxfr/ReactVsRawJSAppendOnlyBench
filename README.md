@@ -6,10 +6,17 @@ This Project is a simple render element benchmark to see append only situations 
 
 Will Virtual DOM really benefit us without premature optimizations or depth knowledge in react ?
 
-There may be faster ways of using React. Please Open a PR if you know a faster way to do it!
+There may be faster ways of using React.
+
+Please Open a PR if you know a faster way to do it!
+
+## Base compiled bin size
+
+
 
 ## Results
 
+-----------------------------------------
 | Iteration | React | Raw JS            |
 |-----------|-------|-------------------|
 | 1         |       | 81.02000000000001 |
@@ -21,4 +28,5 @@ There may be faster ways of using React. Please Open a PR if you know a faster w
 | 7         |       | 54.63499999999476 |
 | 8         |       | 52.14499999998952 |
 | 9         |       | 50.49499999999534 |
+-----------------------------------------
 
