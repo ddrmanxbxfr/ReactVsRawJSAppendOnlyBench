@@ -1,31 +1,21 @@
 import ImageService from "./image_service";
 import PerformanceTimer from "./performance_timer";
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import ImageList from './image_list';
 import { ImageItem } from './image_service';
 
-var body: HTMLElement = document.getElementById("img");
-var refReactComponent;
+var imgList = new ImageList("img");
 var btn = document.getElementById("btnNewPictures");
-
 function HandleBtnClick() {
-  refReactComponent.handleNewItems();
+  imgList.render();
 }
 
 btn.textContent = "Fetch " + ImageService.NB_ITEMS + " Pictures";
 btn.addEventListener("click", HandleBtnClick);
 
-
-
 console.log("--Generating Pictures--");
 PerformanceTimer.Start();
-var pictures: Array<ImageItem> = ImageService.FetchPicturesToRender();
+ImageService.FetchPicturesToRender();
 PerformanceTimer.End("Picture Generation");
 
-console.log("--Drawing React Component--");
-
-refReactComponent = ReactDOM.render(
-      <ImageList />,
-      body
-);
+console.log("--Drawing Raw Render--");
+imgList.render();
